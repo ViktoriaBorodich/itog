@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Визитка</title>
+   <style> 
+body {
+    background-color: #EDE8DC;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+    background-image: url(камера.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-color: rgba(255, 251, 230, 0.9); /* Полупрозрачность */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Теневой эффект */
+    text-align: center;
+    padding: 65px 20px;
+    background-color: #FFFBE6;
+}
+
+.main-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    margin: 0;
+}
+
+.sub-title {
+    font-size: 24px;
+    color: #A5B68D;
+    margin: 10px 0;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Теневой эффект */
+}
+
+.welcome-message {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #A5B68D;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+img {
+    height: 350px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #A5B68D;
+    padding: 10px;
+    position: fixed;
+    width: 96%;
+    top: 0;
+    z-index: 1000;
+ border-bottom-left-radius: 15px; 
+ border-bottom-right-radius: 15px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+}
+
+.nav-link {
+    color: rgb(98, 15, 15);
+    margin: 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    margin: 90px;
+    padding: 20px; /* Увеличение отступов */
+    background-color: white;
+    border-radius: 20px; /* Увеличение округления углов */
+    margin-top: 70px; /* Отступ сверху */
+    margin-bottom: 40px; /* Отступ снизу */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Добавление тени */
+   
+    font-family: 'Raleway', sans-serif; /* Применение шрифта */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+section:hover {
+    transform: translateY(-5px) scale(1.02); /* Эффект при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более выраженная тень при наведении */
+    background-color: #FFFBE6;
+
+}
+
+
+.achievements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 70px; /* Отступ снизу */
+}
+
+.achievement-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 5px 11px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.achievement-card:hover {
+    background-color: #FFFBE6;
+    transform: translateY(-5px); /* Сдвиг при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более выраженная тень при наведении */
+}
+
+.achievement-card h3 {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 0px;
+}
+
+.achievement-card img {
+    width: 200px;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+footer a:hover {
+    color: #A2D2DF;
+}
+
+footer a:visited {
+    color: #A5B68D;
+}
+
+footer a {
+    color: rgb(98, 15, 15);
+}
+
+  /* Новый раздел для владения фототехнологиями */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Автоматическое подстраивание колонок */
+            gap: 20px; /* Промежуток между карточками */
+            padding: 0 50px; /* Внутренние отступы контейнера */
+            border-radius: 10px; /* Округление углов контейнера */
+            justify-content: center; /* Центрирование карточек */
+            align-items: center; /* Выравнивание карточек по вертикали */
+justify-items: center;
+ margin-bottom: 45px; /* Отступ снизу */
+        }
+
+        .skill-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 5px 11px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Добавление плавного перехода */
+            width: 240px; /* Фиксированная ширина карточки */
+            height: 370px; /* Фиксированная высота карточки */
+            display: flex; /* Использование Flexbox для размещения элементов */
+            flex-direction: column; /* Вертикальное расположение элементов */
+            align-items: center; /* Центрирование элементов по горизонтали */
+justify-items: center;
+            justify-content: center; /* Центрирование элементов по вертикали */
+ justify-self: center; /* Центрирование элементов по вертикали */
+        }
+
+        .skill-card img {
+            width: 210px;
+            height: 180px;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+
+             .skill-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #FFFBE6;
+        }
+/* Медиазапросы для адаптивности */
+@media (max-width: 1500px) { 
+    /* Здесь указана ширина экрана примерно половины вашего исходного */
+    .skills-container { 
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr); /* Три карточки на одной строке */
+        gap: 20px; /* Промежуток между карточками */
+        justify-items: center;
+        justify-content: center; 
+        padding: 0 30px; 
+    }
+
+    .skill-card { 
+        padding: 12px; 
+        justify-self: center; 
+        margin-bottom: 10px; 
+    } 
+} 
+
+@media (max-width: 900px) { 
+    .skills-container { 
+        grid-template-columns: repeat(2, 1fr); /* Две карточки на одной строке */
+        gap: 20px; 
+        padding: 0 20px; 
+        justify-content: center; 
+       
+ justify-items: center;
+    }
+
+    .skill-card { 
+        padding: 10px; 
+        justify-self: center; 
+        margin-bottom: 10px; 
+    } 
+}
+
+
+@media (max-width: 600px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        justify-content: center;
+    }
+
+    .skill-card {
+        padding: 10px;
+        justify-self: center;
+        margin-left: 50px; /* Отступ слева для экранов до 480px */
+        margin-right: 50px; /* Отступ справа для экранов до 480px */
+gap: 20px;
+    }
+}
+
+
+/* Стили для бургер-меню */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 4px;
+    transition: 0.4s;
+}
+
+/* Скрытие навигационных ссылок на мобильных устройствах */
+.nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #A5B68D;
+        position: absolute;
+        top: 50px;
+        width: 97%;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-link {
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+/* .custom-section { margin-bottom: 10px; margin-left: 500px; 
+margin-right: 500px;/* Внешние отступы */ 
+padding: 1px; /* Внутренние отступы */
+font-size: 17px; }
+.custon-section:hover {
+    transform: translateY(-5px) scale(1.02); /* Эффект при наведении */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Более выраженная тень при наведении */
+    background-color: #FFFBE6;
+color: white;
+}*/
+
+
+form {
+    background-color: rgba(255, 251, 230, 0.9); /* Полупрозрачность */
+    border-radius: 10px; /* Округленные углы */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+    width: 40%; /* Уменьшенная ширина формы */
+    margin: 100px auto; /* Центрирование формы */
+}
+
+form div {
+    margin-bottom: 20px; /* Отступы между элементами формы */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    color: #333; /* Цвет текста */
+    margin-bottom: 5px; /* Отступ между label и элементом ввода */
+
+}
+
+input, textarea {
+    width: 95%; /* Ширина полей ввода на 100% от родителя */
+    padding: 12px; /* Внутренние отступы */
+    border: 1px solid #ccc; /* Цвет рамки */
+    border-radius: 5px; /* Округление углов */
+    box-sizing: border-box; /* Учет отступов в ширине */
+    resize: vertical; /* Возможность изменения размера только по вертикали */
+    font-family: 'Raleway', sans-serif; /* Шрифт для полей ввода */
+}
+
+input::placeholder, textarea::placeholder {
+    color: #999; /* Цвет текста подсказки */
+    font-style: italic; /* Курсив для подсказки */
+}
+
+button {
+    background-color: #A5B68D; /* Цвет кнопки */
+    color: white; /* Цвет текста кнопки */
+    padding: 12px 24px; /* Внутренние отступы для кнопки */
+    border: none; /* Убираем рамку кнопки */
+    border-radius: 5px; /* Округление углов кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    font-family: 'Raleway', sans-serif; /* Шрифт для кнопки */
+    transition: background-color 0.3s ease; /* Плавный переход для фона кнопки */
+    font-size: 16px; /* Размер шрифта кнопки */
+}
+
+button:hover {
+    background-color: #89A079; /* Цвет кнопки при наведении */
+}
+
+
+
+
+
+/* Основной стиль логотипа */
+.logo {
+    position: fixed;
+    top: 5px;
+    left: 30px;
+    width: 70px;
+    height: auto;
+    transition: all 0.3s ease;
+}
+
+/* Уменьшение логотипа при прокрутке */
+.scrolled .logo {
+    width:29px;
+}
+
+ </style>
+
+
+
+
+</head>
+<body><div id="glav">
+    <header class="main-header">
+
+        <h1 class="main-title">Привет! Я Виктория Бородич — фотограф</h1>
+        <h2 class="sub-title">Запечатлеваю незабываемые моменты</h2>
+        <p class="welcome-message"> Специализируюсь на портретной и семейной фотографии, помогая вам сохранить самые важные моменты вашей жизни.</p>
+        <img src="я.jpg" alt="Виктория Бородич - фотограф" class="profile-photo">
+        <br>
+        <a href="https://web.telegram.org/k/#@vi_borodich" class="cta-button">Связаться со мной</a>
+<nav>
+    <div class="burger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="nav-links">
+ <img src="oo.png" alt="Логотип Виктории Бородич" class="logo">
+        <a href="#glav" class="nav-link">Главная</a>
+        <a href="#ach" class="nav-link">Достижения</a>
+        <a href="#op" class="nav-link">Опыт</a>
+ <a href="#otz" class="nav-link">Отзывы</a>
+        <a href="#cont" class="nav-link">Контакты</a>
+    </div>
+</nav>
+    </header>
+</div>
+
+    <main>
+
+<div id="ach">
+</br>
+<section class="custom-section"> 
+<a href="#ach" style="text-decoration: none; color=black;">
+<h1 style="color: #A5B68D;">Достижения</h1></a>
+ </section>
+    <div class="achievements"> 
+        <div class="achievement-card"> 
+            <img src="vogue.jpg" alt="Публикации в Vogue"> 
+            <h3>Публикации в журналах</h3> 
+            <p>Мои работы были опубликованы в известных журналах, таких как Vogue и National Geographic.</p> 
+        </div> 
+        <div class="achievement-card"> 
+            <img src="выставка.jpg" alt="Выставки"> 
+            <h3>Выставки</h3> 
+            <p>Участвовала в международных выставках в Париже и Нью-Йорке, демонстрируя свои уникальные фотографии.</p> 
+        </div> 
+        <div class="achievement-card"> 
+            <img src="награда.jpg" alt="Награды"> 
+            <h3>Награды</h3> 
+            <p>Обладатель премий за лучшую портретную фотографию.</p> 
+        </div> 
+        <div class="achievement-card"> 
+            <img src="яяя.jpg" alt="Опыт работы"> 
+            <h3>Опыт работы</h3> 
+            <p>Более 10 лет профессионального опыта в сфере фотографии.</p> 
+        </div> 
+    </div> 
+</div>
+
+
+        <!-- Новый раздел для владения фототехнологиями -->
+
+        <div id="op">
+</br></br>
+<section class="custom-section"> 
+<a href="#op" style="text-decoration: none; color=black;">
+<h1 style="color: #A5B68D;">Владение технологиями</h1></a>
+ </section>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <img src="камеры.jpg" alt="">
+                    <h3>Фотография</h3>
+                    <p>Профессиональная работа с различными фотокамерами и объективами.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="обработка.jpg" alt="">
+                    <h3>Редактирование</h3>
+                    <p>Опыт работы с Adobe Photoshop и Lightroom для обработки изображений.</p>
+                </div>
+            
+                <div class="skill-card">
+                    <img src="композиция1.jpg" alt="">
+                    <h3>Композиция</h3>
+                    <p>Умение создавать гармоничные и привлекательные композиции.</p>
+                </div>
+                <div class="skill-card">
+                    <img src="ретушь.jpg" alt="">
+                    <h3>Ретушь</h3>
+                    <p>Профессиональная ретушь фотографий для достижения идеального результата.</p>
+                </div>
+  <div class="skill-card">
+                    <img src="дрон.jpg" alt="">
+                    <h3>Съемка с дронов</h3>
+                    <p>Управление дроном для создания аэрофотоснимков и видеозаписей.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</br>
+
+
+ <div class="nav-link" id="otz">
+       
+            <section>
+<h1 style="color: #A5B68D">Буду рада обратной связи!</h1>
+
+                <form action="https://getform.io/f/awnnewxb" method="post">
+    <div>
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+    </div>
+    <div>
+        <label for="message">Ваш отзыв:</label>
+        <textarea id="message" name="message" required placeholder="Введите ваш отзыв"></textarea>
+    </div>
+    <div>
+        <button type="submit">Отправить</button>
+    </div>
+
+</form>
+ </section>
+         
+ 
+    </div>
+
+
+    <div class="info" id="cont">
+        <footer>
+            <section>
+                <h3>Следите за мной в социальных сетях:</h3>
+                <a href="https://www.instagram.com/vi_borodich?igsh=MWNvZ3Q2NGR3d25icw==">Instagram</a>
+                <a href="https://vk.com/vi.boro">VK</a>
+            </section>
+        </footer>
+    </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const navLinks = document.querySelector(".nav-links");
+
+    burgerMenu.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        burgerMenu.classList.toggle("open");
+    });
+});
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 50) {
+        document.body.classList.add('scrolled');
+    } else {
+        document.body.classList.remove('scrolled');
+    }
+});
+
+</script>
+</body>
+</html>
